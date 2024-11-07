@@ -61,6 +61,7 @@
 		"@wordpress/notices": "*",
 		"@wordpress/preferences": "*",
 		"@wordpress/priority-queue": "*",
+		"@wordpress/primitives": "*",
 		"@wordpress/private-apis": "*",
 		"@wordpress/rich-text": "*",
 		"@wordpress/style-engine": "*",

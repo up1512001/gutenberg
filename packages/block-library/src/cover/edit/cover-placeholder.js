@@ -34,6 +34,7 @@ export default function CoverPlaceholder( {
 			onToggleFeaturedImage={ toggleUseFeaturedImage }
 			onError={ onError }
 			style={ style }
+			withIllustration
 		>
 			{ children }
 		</MediaPlaceholder>

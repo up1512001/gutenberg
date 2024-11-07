@@ -72,6 +72,22 @@
 		left: 0;
 	}
 
+	&.is-selected {
+		// Make placeholder background white & text black when block is selected.
+		.has-illustration {
+			background: $white;
+			color: #1e1e1e;
+			&::before {
+				background: $white;
+			}
+		}
+
+		// hide the placeholder illustration when the block is selected.
+		.components-placeholder__illustration {
+			opacity: 0;
+			z-index: -1;
+		}
+	}
 }
 
 [data-align="left"] > .wp-block-cover,

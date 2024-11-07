@@ -21,6 +21,7 @@ import { useSelect } from '@wordpress/data';
 import { keyboardReturn } from '@wordpress/icons';
 import { pasteHandler } from '@wordpress/blocks';
 import deprecated from '@wordpress/deprecated';
+import { SVG, Path } from '@wordpress/primitives';
 
 /**
  * Internal dependencies
@@ -31,6 +32,18 @@ import URLPopover from '../url-popover';
 import { store as blockEditorStore } from '../../store';
 
 const noop = () => {};
+
+const PlaceholderIllustration = (
+	<SVG
+		className="components-placeholder__illustration"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 60 60"
+		preserveAspectRatio="none"
+	>
+		<Path vectorEffect="non-scaling-stroke" d="M60 60 0 0" />
+	</SVG>
+);
 
 const InsertFromURLPopover = ( {
 	src,
@@ -141,6 +154,7 @@ export function MediaPlaceholder( {
 	mediaLibraryButton,
 	placeholder,
 	style,
+	withIllustration,
 } ) {
 	if ( deprecatedOnHTMLDrop ) {
 		deprecated( 'wp.blockEditor.MediaPlaceholder onHTMLDrop prop', {
@@ -353,7 +367,8 @@ export function MediaPlaceholder( {
 			className,
 			{
 				'is-appender': isAppender,
-			}
+			},
+			withIllustration ? 'has-illustration' : null
 		);
 
 		return (
@@ -366,6 +381,7 @@ export function MediaPlaceholder( {
 				onDoubleClick={ onDoubleClick }
 				preview={ mediaPreview }
 				style={ style }
+				withIllustration={ PlaceholderIllustration }
 			>
 				{ content }
 				{ children }

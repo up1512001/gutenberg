@@ -168,7 +168,7 @@
 		"terser": "5.32.0",
 		"terser-webpack-plugin": "5.3.10",
 		"typescript": "5.7.2",
-		"uuid": "9.0.1",
+		"uuid": "14.0.0",
 		"webdriverio": "8.16.20",
 		"webpack": "5.97.0",
 		"webpack-bundle-analyzer": "4.9.1",
